@@ -1,0 +1,4 @@
+--patch-module
+co.edu.uniquindio.poo.parcial3=_
+--add-reads
+co.edu.uniquindio.poo.parcial3=ALL-UNNAMED

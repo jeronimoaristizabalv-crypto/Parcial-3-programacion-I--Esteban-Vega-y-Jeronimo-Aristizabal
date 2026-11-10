@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.parcial3.viewController.EmpleadoViewController">
+    <children>
+        <Pane layoutX="34.0" layoutY="15.0" prefHeight="190.0" prefWidth="632.0">
+            <children>
+                <Label layoutX="215.0" layoutY="4.0" text="Gestión de empleados">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="20.0" layoutY="48.0" text="Nombre:" />
+                <TextField fx:id="txtNombre" layoutX="100.0" layoutY="44.0" prefWidth="200.0" />
+                <Label layoutX="20.0" layoutY="88.0" text="Documento:" />
+                <TextField fx:id="txtDocumento" layoutX="100.0" layoutY="84.0" prefWidth="200.0" />
+                <Label layoutX="20.0" layoutY="128.0" text="Código:" />
+                <TextField fx:id="txtCodigo" layoutX="100.0" layoutY="124.0" prefWidth="200.0" />
+                <Label layoutX="340.0" layoutY="48.0" text="Minutos:" />
+                <TextField fx:id="txtMinutos" layoutX="420.0" layoutY="44.0" prefWidth="200.0" />
+                <Label layoutX="340.0" layoutY="88.0" text="Tipo:" />
+                <ComboBox fx:id="cbTipo" layoutX="420.0" layoutY="84.0" prefWidth="200.0" />
+                <Label layoutX="340.0" layoutY="128.0" text="Caja:" />
+                <TextField fx:id="txtCaja" layoutX="420.0" layoutY="124.0" prefWidth="200.0" />
+            </children>
+        </Pane>
+        <Button layoutX="34.0" layoutY="215.0" mnemonicParsing="false" onAction="#registrarEmpleado" prefWidth="140.0" text="Registrar empleado" />
+        <Button layoutX="194.0" layoutY="215.0" mnemonicParsing="false" onAction="#actualizarEmpleado" prefWidth="140.0" text="Actualizar empleado" />
+        <Button layoutX="354.0" layoutY="215.0" mnemonicParsing="false" onAction="#eliminarEmpleado" prefWidth="140.0" text="Eliminar empleado" />
+        <Button layoutX="514.0" layoutY="215.0" mnemonicParsing="false" onAction="#limpiarCampos" prefWidth="140.0" text="Limpiar" />
+        <TableView fx:id="tblEmpleados" layoutX="34.0" layoutY="255.0" prefHeight="280.0" prefWidth="632.0">
+            <columns>
+                <TableColumn fx:id="tbcNombre" prefWidth="130.0" text="Nombre" />
+                <TableColumn fx:id="tbcDocumento" prefWidth="100.0" text="Documento" />
+                <TableColumn fx:id="tbcCodigo" prefWidth="80.0" text="Código" />
+                <TableColumn fx:id="tbcMinutos" prefWidth="80.0" text="Minutos" />
+                <TableColumn fx:id="tbcTipo" prefWidth="160.0" text="Tipo" />
+                <TableColumn fx:id="tbcCaja" prefWidth="80.0" text="Caja" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

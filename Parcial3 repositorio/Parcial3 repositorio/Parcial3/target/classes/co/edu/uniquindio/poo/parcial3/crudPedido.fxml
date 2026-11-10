@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.parcial3.viewController.PedidoViewController">
+    <children>
+        <Pane layoutX="34.0" layoutY="15.0" prefHeight="140.0" prefWidth="632.0">
+            <children>
+                <Label layoutX="230.0" layoutY="4.0" text="Gestión de pedidos">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="20.0" layoutY="48.0" text="Código:" />
+                <TextField fx:id="txtCodigo" layoutX="100.0" layoutY="44.0" prefWidth="200.0" />
+                <Label layoutX="20.0" layoutY="88.0" text="Cliente:" />
+                <TextField fx:id="txtNombreCliente" layoutX="100.0" layoutY="84.0" prefWidth="200.0" />
+                <Label layoutX="340.0" layoutY="48.0" text="Tipo de pan:" />
+                <ComboBox fx:id="cbTipoPan" layoutX="420.0" layoutY="44.0" prefWidth="200.0" />
+                <Label layoutX="340.0" layoutY="88.0" text="Cantidad:" />
+                <TextField fx:id="txtCantidad" layoutX="420.0" layoutY="84.0" prefWidth="200.0" />
+            </children>
+        </Pane>
+        <Button layoutX="34.0" layoutY="165.0" mnemonicParsing="false" onAction="#registrarPedido" prefWidth="140.0" text="Registrar pedido" />
+        <Button layoutX="194.0" layoutY="165.0" mnemonicParsing="false" onAction="#asignarPedido" prefWidth="140.0" text="Asignar pedido" />
+        <Button layoutX="354.0" layoutY="165.0" mnemonicParsing="false" onAction="#cancelarPedido" prefWidth="140.0" text="Cancelar pedido" />
+        <Button layoutX="514.0" layoutY="165.0" mnemonicParsing="false" onAction="#limpiarCampos" prefWidth="140.0" text="Limpiar" />
+        <Label layoutX="34.0" layoutY="214.0" text="Filtrar por estado:" />
+        <ComboBox fx:id="cbEstado" layoutX="150.0" layoutY="210.0" onAction="#filtrarPorEstado" prefWidth="160.0" />
+        <Button layoutX="324.0" layoutY="210.0" mnemonicParsing="false" onAction="#verTodos" text="Ver todos" />
+        <TableView fx:id="tblPedidos" layoutX="34.0" layoutY="250.0" prefHeight="285.0" prefWidth="632.0">
+            <columns>
+                <TableColumn fx:id="tbcCodigo" prefWidth="70.0" text="Código" />
+                <TableColumn fx:id="tbcNombreCliente" prefWidth="130.0" text="Cliente" />
+                <TableColumn fx:id="tbcTipoPan" prefWidth="95.0" text="Tipo de pan" />
+                <TableColumn fx:id="tbcCantidad" prefWidth="70.0" text="Cantidad" />
+                <TableColumn fx:id="tbcEstado" prefWidth="95.0" text="Estado" />
+                <TableColumn fx:id="tbcCodigoEmpleadoAsignado" prefWidth="100.0" text="Empleado" />
+                <TableColumn fx:id="tbcMinutosReservados" prefWidth="70.0" text="Minutos" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
